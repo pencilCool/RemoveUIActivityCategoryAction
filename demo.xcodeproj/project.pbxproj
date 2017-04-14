@@ -13,6 +13,9 @@
 		EC60FB3A1E9F708D00942150 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC60FB381E9F708D00942150 /* Main.storyboard */; };
 		EC60FB3C1E9F708D00942150 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC60FB3B1E9F708D00942150 /* Assets.xcassets */; };
 		EC60FB3F1E9F708D00942150 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC60FB3D1E9F708D00942150 /* LaunchScreen.storyboard */; };
+		EC60FB481E9F724200942150 /* CustomActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = EC60FB471E9F724200942150 /* CustomActivity.m */; };
+		EC60FB4A1E9F72A800942150 /* chrome.png in Resources */ = {isa = PBXBuildFile; fileRef = EC60FB491E9F72A800942150 /* chrome.png */; };
+		EC60FB4E1E9F7E3000942150 /* UIActivityViewController+YHExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EC60FB4D1E9F7E3000942150 /* UIActivityViewController+YHExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		EC60FB3B1E9F708D00942150 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC60FB3E1E9F708D00942150 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC60FB401E9F708D00942150 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC60FB461E9F724200942150 /* CustomActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomActivity.h; sourceTree = "<group>"; };
+		EC60FB471E9F724200942150 /* CustomActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomActivity.m; sourceTree = "<group>"; };
+		EC60FB491E9F72A800942150 /* chrome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chrome.png; sourceTree = "<group>"; };
+		EC60FB4C1E9F7E3000942150 /* UIActivityViewController+YHExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityViewController+YHExtension.h"; sourceTree = "<group>"; };
+		EC60FB4D1E9F7E3000942150 /* UIActivityViewController+YHExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityViewController+YHExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +68,14 @@
 			children = (
 				EC60FB321E9F708D00942150 /* AppDelegate.h */,
 				EC60FB331E9F708D00942150 /* AppDelegate.m */,
+				EC60FB571E9FB8C400942150 /* Extension */,
 				EC60FB351E9F708D00942150 /* ViewController.h */,
 				EC60FB361E9F708D00942150 /* ViewController.m */,
+				EC60FB561E9FB8BC00942150 /* view */,
 				EC60FB381E9F708D00942150 /* Main.storyboard */,
 				EC60FB3B1E9F708D00942150 /* Assets.xcassets */,
 				EC60FB3D1E9F708D00942150 /* LaunchScreen.storyboard */,
+				EC60FB491E9F72A800942150 /* chrome.png */,
 				EC60FB401E9F708D00942150 /* Info.plist */,
 				EC60FB2F1E9F708D00942150 /* Supporting Files */,
 			);
@@ -77,6 +88,24 @@
 				EC60FB301E9F708D00942150 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC60FB561E9FB8BC00942150 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				EC60FB461E9F724200942150 /* CustomActivity.h */,
+				EC60FB471E9F724200942150 /* CustomActivity.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		EC60FB571E9FB8C400942150 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EC60FB4C1E9F7E3000942150 /* UIActivityViewController+YHExtension.h */,
+				EC60FB4D1E9F7E3000942150 /* UIActivityViewController+YHExtension.m */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC60FB3F1E9F708D00942150 /* LaunchScreen.storyboard in Resources */,
+				EC60FB4A1E9F72A800942150 /* chrome.png in Resources */,
 				EC60FB3C1E9F708D00942150 /* Assets.xcassets in Resources */,
 				EC60FB3A1E9F708D00942150 /* Main.storyboard in Resources */,
 			);
@@ -151,9 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC60FB4E1E9F7E3000942150 /* UIActivityViewController+YHExtension.m in Sources */,
 				EC60FB371E9F708D00942150 /* ViewController.m in Sources */,
 				EC60FB341E9F708D00942150 /* AppDelegate.m in Sources */,
 				EC60FB311E9F708D00942150 /* main.m in Sources */,
+				EC60FB481E9F724200942150 /* CustomActivity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BADWEEE97;
 				INFOPLIST_FILE = demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tangyuhua.com.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -287,6 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4BADWEEE97;
 				INFOPLIST_FILE = demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tangyuhua.com.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,6 +346,7 @@
 				EC60FB451E9F708D00942150 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
